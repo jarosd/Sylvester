@@ -3,7 +3,7 @@ var marker = [];
 var parsedText = null;
 
 // date cisluje mesiace od nuly!
-var dayFinal = new Date(2019, 0, 1);
+var dayFinal = new Date(2020, 0, 1);
 var about = "<h2>New Year notifier on a map. 2017</h2><p>Current set date: " + dayFinal.toLocaleDateString() + " " + dayFinal.toLocaleTimeString() + ".</p>";
 var minutesNotif = 2;
 var soundLength = 3;
