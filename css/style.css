@@ -1,0 +1,80 @@
+/* CSS Document */ 
+
+/* mapa na celú obrazovku s uprednostnenim tlaèidiel do popredia */
+html, body { 
+  position: relative;
+}
+
+html, body, #map { 
+  position: relative; 
+  padding: 0px; 
+  margin: 0px; 
+  height: 100%;
+  width: 100%; 
+  z-index: 1;
+}
+
+#wrapper { 
+  padding: 0px; 
+  margin: 0px; 
+  height: 100%; 
+  width: 100%; 
+  z-index: 1; 
+}
+
+#buttons { 
+  position:absolute; 
+  z-index: 1000; 
+  bottom: 10px; 
+  left: 10px; 
+}
+
+#about, #nearestcelebrators {
+  background-color: #FFFFFF;
+  border: 1px solid #999999;
+  box-shadow:  3px 3px 5px #999999;
+  border-radius: 5px;
+  font-family: Arial, "Arial CE", sans-serif;  
+  color: #222222;
+  padding: 5px;
+  margin: 0px 10px 0px 0px;
+}
+
+#about:hover, #nearestcelebrators:hover {
+  background-color: #EEEEEE;
+}
+
+table, tr, th, td { 
+  border: 1px black solid; 
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: bold;
+  background-color: #FFCC66;
+}
+
+tr, th, td { padding: 5px; }
+.boldcell { font-weight: bold; }
+
+.smallimg { 
+  vertical-align: middle; 
+  height: 48px; 
+  width: auto; 
+  line-height: 58px; 
+  padding: 0px 5px; 
+}
+
+.textalert { 
+  font-family: Arial, "Arial CE", sans-serif; 
+  font-size: 12pt; 
+  color: #FFFFFF;
+  margin: 5px; 
+}
+
+.textalertnearest{ 
+  font-family: Arial, "Arial CE", sans-serif; 
+  font-size: 12pt; 
+  margin: 5px; 
+  color: #FFFFFF; 
+}
