@@ -7,7 +7,7 @@ var dayFinal = new Date(2019, 0, 1);
 var about = "<h2>New Year notifier on a map. 2017</h2><p>Current set date: " + dayFinal.toLocaleDateString() + " " + dayFinal.toLocaleTimeString() + ".</p>";
 var minutesNotif = 2;
 var soundLength = 3;
-var wwwPosition = "http://localhost/moje/silvester/";
+// var wwwPosition = "http://localhost/moje/silvester/";
 
 /**
  *
@@ -29,8 +29,9 @@ function showAbout() {
 function loadData(callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', wwwPosition + "data/countries.json", true);
-    
+    // xobj.open('GET', wwwPosition + "data/countries.json", true);
+    xobj.open('GET', "https://raw.githubusercontent.com/jarosd/Sylvester/master/data/countries.json", true);
+
     xobj.onreadystatechange = function() {
         if (xobj.readyState == 4 && xobj.status == 200) {
             // .open will NOT return a value but simply returns undefined in async mode so use a callback
@@ -42,6 +43,7 @@ function loadData(callback) {
 }
 
 // experimental checking of existency of image file
+// not used
 function checkImagePHP(file) {
     var xobj = new XMLHttpRequest();
     
@@ -57,6 +59,7 @@ function checkImagePHP(file) {
     xobj.send("filename=" + file);
 }
 
+// not used
 function testFile() {
   for (var i = 0; i < parsedText.length; i++) {
     checkImagePHP(parsedText[i]["country_abbr"] + ".png");
